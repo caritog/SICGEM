@@ -1,0 +1,59 @@
+element.style{
+    padding: 15px 15px;
+}
+.card-community {
+    width: 23rem;
+    height: 30rem;
+    padding-left: 0px;
+    border-color: rebeccapurple;
+    border-radius: 2rem;
+}
+.card-community:hover{
+    box-shadow: 5px 10px 1px rebeccapurple !important;
+}
+.card-body-community{
+    padding: 2rem 0 !important;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+.card-text-community{
+    font-size: 0.9rem;
+    padding: 0.4rem 1.9rem;
+}
+.container-fluid .row{
+    padding-top:3rem;
+}
+.overflow{
+    overflow: hidden;
+}
+.card-img-top-community{
+    height: 10rem;
+    width: 95%;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    border-radius: 2rem;
+}
+.card-img-top-community:hover{
+    transform: scale(1.2);
+}
+.card-title-community {
+    font-size: x-large;
+    color: rebeccapurple;
+}
+.main-title {
+    text-align: center;
+    padding: 0.5rem;
+}
+.design-title {
+    width: 35%;
+    margin: 3rem 25rem;
+    position: relative;
+    color: rebeccapurple;
+    border-style: solid;
+    border-color: rebeccapurple;
+    border-radius: 0.5rem;
+}
+.card-btn{
+    color: #ffffff !important;
+    background-color:  rebeccapurple !important;
+    border-style: none !important;
+}

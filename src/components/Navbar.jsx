@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-//rafce abreviación
 
 class Navbar extends Component {
     render() {
         return (
-
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark sticky-top">
                     <div className="container">
-                        <a className="navbar-brand" rel="noopener noreferrer" href="#"></a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
                             aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -39,16 +36,24 @@ class Navbar extends Component {
                                     <a className="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">REGÍSTRATE</a>
                                     <div className="dropdown-menu" aria-labelledby="dropdown07">
-                                        <a className="dropdown-item" href="#">INSTITUCIÓN ALIADA</a>
-                                        <a className="dropdown-item" href="#">OPORTUNIDADES MUJER</a>
+                                        <div className="dropdown-item" >
+                                        <Link to="/login" className="nav-link text-dark m-0" id="cuentaconnosotras">
+                                            INSTITUCIÓN ALIADA
+                                        </Link>
+                                        </div>
+                                        <div className="dropdown-item" >
+                                        <Link to="/maincards" className="nav-link text-dark m-0" id="cuentaconnosotras">
+                                            OPORTUNIDADES MUJER
+                                        </Link>
+                                        </div>
                                     </div>
                                 </li>
                                 <li className="nav-item m3">
-                                    <Link
-                                        to="/form" className="d-none" id="encuesta">
+                                    <button className="btn btn-outline-light p-0" >
+                                    <Link to="/form" className="nav-link riesgo m-0" id="cuentaconnosotras">
+                                            ¿ESTOY EN RIESGO?
                                     </Link>
-                                    <a className="nav-link riesgo"
-                                        href="https://www.medellin.gov.co/sicgem_war/app/#/feminicide-survey?clean">¿ESTOY EN RIESGO?</a>
+                                    </button>
                                 </li>
                             </ul>
                             <form className="form-inline my-2 my-md-0">

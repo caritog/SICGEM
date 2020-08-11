@@ -1,48 +1,26 @@
-/*
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-*/
-
-
-/* //////////////////// INICIO HEADER  ////////////////////////// */
+/* //////////////////// HEADER  ////////////////////////// */
 
 .img-responsive {
   width: 50%;
   height: 20%;
   padding-left: 5rem;
 }
-
 .icons {
   padding-right: 5rem;
 }
-
 .facebook-icon .fa-facebook {
   color: #3b5998;
   font-size: 2.2rem;
   margin: 5px;
 }
-
 .facebook-icon .fa-facebook:hover {
   color: #723e98;
 }
-
 .twitter-icon .fa-twitter {
   color: #00acee;
   font-size: 2.2rem; 
   margin: 5px;
 }
-
 .twitter-icon .fa-twitter:hover {
   color: #723e98;
 }
@@ -75,117 +53,86 @@ code {
 
   /* Los estilos aquí contenidos solo se aplicarán a partir
   del tamaño de pantalla indicado */
-
-
-/* //////////////////// FIN HEADER ////////////////////////// */
-
-
-/* //////////////////// INICIO NAV BAR ////////////////////////// */
-
-/* background-color:rgba(114, 62, 152, 0.9); */
+/* //////////////////// NAV BAR ////////////////////////// */
 
 .navbar {
   background-color:#723e98;
 }
-
 .dropdown-item:active {
   background-color:#723e98;
   color: white;
 }
-
 .riesgo {
-  color: rgb(255, 0, 0) !important;
+  color: #ffffff !important;
+  background-color: #f00ca4;
   font-weight: bolder;
+  border: solid #ffffff 1px; 
+}
+.riesgo:hover {
+  color: #f00ca4 !important;
+  background-color: #ffffff;
 }
 
-/*style="background-color: rebeccapurple; */
-/*style=" color: red; font-weight: bold; border-radius: 0.25rem;" */
+/* //////////////////// BANNER ////////////////////////// */
 
-/* //////////////////// FIN NAV BAR ////////////////////////// */
-
-
-/* //////////////////// IMAGEN GRANDE CON TEXTO ////////////////////////// */
-
-.contenedor{
+section.masthead-body.masthead {
   position: relative;
-  display: inline-block;
-  text-align: center;
+  background-color: #343a40;
+  background: linear-gradient(to bottom, rgba(90, 63, 90, 0.8) 0%, rgba(90, 63, 90, 0.8) 100%), url("../images/banner.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
-
-.texto-img{
+section.masthead-body.masthead .overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #482164;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
 }
-
-.imagen-morada{
-  filter: opacity(40%);
+section.masthead-body.masthead p {
+  font-size: 2rem;
 }
-
-/*
-@media (min-width: 360px) {
-
-  .texto-img{
-   
-    position: relative;
-    top: 50%;
-    left: 50%;
-    right: 40%;
-    bottom: 40%;
-    transform: translate(-50%, -50%);
-    color: #482164;
+@media (min-width: 768px) {
+  section.masthead-body.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
-
-
-  .texto-img h2 {
-    font-size: 14px;
-    
+  section.masthead-body.masthead p {
+    font-size: 3rem;
   }
-
-  .texto-img p {
-    font-size: 10px;
-   
-  }
-
 }
-  */
+/* //////////////////// BODY ////////////////////////// */
 
-
-/* //////////////////// IMAGEN GRANDE CON TEXTO ////////////////////////// */
-
-
-
-
-/* //////////////////// INICIO BODY ////////////////////////// */
-
+.btn-body {
+  color: #ffffff !important;
+  background-color: #723e98 !important;
+  border-style: none !important;
+}
 .body3 {
   background-color: #723e98;
   color: white;
 }
-
 .fa-phone {
   color: white;
   font-size: 3.5rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-
 .fa-truck {
   color: white;
   font-size: 3.5rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-
 .fa-gavel {
   color: white;
   font-size: 3.5rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-
 .fa-female {
   color: white;
   font-size: 3.5rem;
@@ -193,46 +140,35 @@ code {
   margin-bottom: 2rem;
 }
 
-
-/* //////////////////// FIN BODY ////////////////////////// */
-
-/* //////////////////// INICIO FOOTER ////////////////////////// */
+/* //////////////////// FOOTER ////////////////////////// */
 
 #footer .footer-widgets-section {
   background-color: #00a7b8;
 }
-
 .footer-widgets-section {
   padding: 45px 0;
 }
-
 *, :after, :before {
   box-sizing: border-box;
 }
-
 div {
   display: block;
 }
-
 .footer-section {
   background: #B7B7B7;
   color: #ffffff;
   font-size: 14px;
   font-weight: normal;
 }
-
 .widget_nav_menu li.menu-item {
   margin: 0 0 15px 0;
 }
-
 .textwidget {
   margin-bottom: 25px;
 }
-
 #tpath_social_links_widget-widget-2 li{
   display: inline-block;
 }
-
 .widget-soc-icon .fa-facebook {
   color: #ffffff;
   font-size: 1.5rem;
@@ -241,7 +177,6 @@ div {
   border: 1px solid white;
   border-radius: 50px;
 }
-
 .widget-soc-icon .fa-twitter {
   color: #ffffff;
   font-size: 1.5rem; 
@@ -250,87 +185,38 @@ div {
   border: 1px solid white;
   border-radius: 50px;
 }
-
-/*.fa-facebook .fa-twitter {
-  padding: 5px;
-  border: 1px solid white;
-  border-radius: 50px;
-} */
-
-
-
-
-/*
-
-.facebook .fab {
-  color: #ffffff;
-  font-size: 1.5rem;
-  margin: 5px;
-}
-
-.twitter .fab {
-  color: #ffffff;
-  font-size: 1.5rem; 
-  margin: 5px;
-}
-
-i.fab {
-  padding: 5px;
-  border: 1px solid white;
-  border-radius: 50px;
-}
-
-.facebook .fab:hover {
-  color: #723e98;
-}
-
-.twitter .fab:hover {
-  color: #723e98;
-}
-
-*/
-
 .widget-soc-icon .fa-facebook:hover {
   color: #3b5998;
 }
-
 .widget-soc-icon .fa-twitter:hover {
   color: #00acee;
 }
-
 .widget ul {
   padding: 0px;
   list-style: none;
 }
-
 ul, ol {
   margin-bottom: 20px;
 }
-
 .footer-widgets ul li a {
   color: #f7f7f7;
   font-weight: normal;
 }
-
 a, a.btn-link {
   color: #723e98;
 }
-
 .contact-widget-text a {
   color: #723e98;
   text-decoration: none;
 }
-
 .footer-widgets ul li:hover a, .footer-section a:hover {
   color: #723e98;
   text-decoration: none;
 }
-
 #footer .footer-copyright-section {
   background-color: #6d6e71;
   color: #B7B7B7;
 }
-
 .copy {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
@@ -338,21 +224,15 @@ a, a.btn-link {
   font-weight: normal;
   margin: 0;
 }
-
 .copy a {
   font-weight: bold;
   color: #723e98;
 }
-
 .copy a:hover {
   color: #c9c9c9c9;
 }
-
 .footer-copyright-section {
   border-top: 0px solid #6d6e71;
   padding: 20px 0;
   text-align: center;
 }
-
-
-/* //////////////////// FIN FOOTER ////////////////////////// */

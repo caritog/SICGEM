@@ -1,97 +1,26 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-
+import MainPage from './components/MainPage';
 import Form from './components/Form';
 import Response from "./components/Response";
+import MainCards from "./components/MainCards";
 
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Body from './components/Body';
-import Footer from './components/Footer';
-
-
-//import Prueba from "./components/Prueba";
-
-
-
-
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
-
-    <BrowserRouter basename='/encuesta/'>
-
+    <BrowserRouter basename='/cuentaconnosotras/'>
       <Switch>
-        <Route exact path="/" component={Header}>
-        </Route>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/maincards" component={MainCards} />
+        <Route exact path="/response" component={Response} />
+        <Route exact path="/form" component={Form} />
+        <Route exact path="/" component={MainPage} />
       </Switch>
-
-      <Switch>
-        <Route
-          exact path="/" component={Navbar}>
-        </Route >
-      </Switch>
-
-      <Switch>
-        <Route
-          exact path="/" component={Body}>
-        </Route>
-      </Switch>
-
-      <Switch>
-        <Route
-          exact path="/" component={Footer}>
-        </Route>
-      </Switch>
-
-      <Switch>
-        <Route
-          exact path="/response" component={Response}>
-        </Route >
-
-        <Route
-          exact path="/form" component={Form}>
-        </Route>
-      </Switch>
-
     </BrowserRouter>
-
   )
 }
 
 export default App;
-
-
-
-
-/*import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink
-} from "react-router-dom";
-
-function App() {
-  return (
-    <Router>
-      <div className="container">
-      <h1>Todo OK</h1>
-      <hr />
-      <Switch>
-        <Route path="/" exact>
-          Inicio
-        </Route>
-        <Route>
-
-        </Route>
-      </Switch>
-     </div>
-    </Router>
-  );
-}
-
-export default App;
-
-*/

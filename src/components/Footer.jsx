@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { Component } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { fas } from '@fortawesome/free-solid-svg-icons'
-import {  faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
-
-const Footer = () => {
-    return (
-        <div>
+class Footer extends Component {
+    render() {
+        return (
+            <div>
             <div id="footer" className="footer-section">
                 <div className="footer-inner-wrapper">
                     <div id="footer-widgets-container" className="footer-widgets-section">
@@ -109,7 +108,8 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    )
-}
+        )
+    }
+};
 
 export default Footer;

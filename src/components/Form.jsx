@@ -22,10 +22,12 @@ export default class Form extends Component {
                 pregunta9: "",
                 pregunta10: "",
                 comment: "",
+                autorizacion: "",
             },
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
+
     }
 
     handleChange(e) {
@@ -37,7 +39,12 @@ export default class Form extends Component {
         });
     }
 
-    handleClick() {
+
+    handleClick(e) {
+
+        //Para evitar el procesamiento automático de los formularios
+        e.preventDefault();
+
         //Datos usuaria
         sessionStorage.setItem("name", this.state.values.name)
         sessionStorage.setItem("age", this.state.values.age)
@@ -45,6 +52,52 @@ export default class Form extends Component {
         sessionStorage.setItem("number", this.state.values.number)
         sessionStorage.setItem("date", this.state.values.date)
 
+        var name, age, email, number;
+        name = document.getElementById("name").value;
+        age = document.getElementById("age").value;
+        email = document.getElementById("email").value;
+        number = document.getElementById("number").value;
+        var expresion = /\w+@\w+\.[a-z]/;
+        var letras = /^[a-zA-Z áéíóúÁÉÍÓÚñÑ\s]*$/;
+
+        if (name === "" || age === "" || email === "" || number === "") {
+            alert("Todos los campos son obligatorios");
+            return false;
+        }
+        else if (name.length < 6 || name.length > 40) {
+            alert("Por favor ingrese su nombre completo");
+            return false;
+        } 
+        else if (!letras.test(name)) {
+            alert("No se permiten valores numéricos en el nombre");
+            return false;
+        }
+        else if (age.length > 2) {
+            alert("La edad es muy larga");
+            return false;
+        }
+        else if (isNaN(age)) {
+            alert("Debe igresar su edad en números");
+            return false;
+        }
+        else if (email.length > 30) {
+            alert("El correo es muy largo");
+            return false;
+        }
+        else if (!expresion.test(email)) {
+            alert("El correo no es válido");
+            return false;
+        }
+        else if (number.length < 7 || number.length > 10) {
+            alert("Ingrese un número de teléfono válido");
+            return false;
+        }
+        else if (isNaN(number)) {
+            alert("El teléfono ingresado no es válido");
+            return false;
+        }
+
+        
         //Preguntas radio buttons
         sessionStorage.setItem("pregunta1", this.state.values.pregunta1)
         sessionStorage.setItem("pregunta2", this.state.values.pregunta2)
@@ -57,6 +110,9 @@ export default class Form extends Component {
         sessionStorage.setItem("pregunta9", this.state.values.pregunta9)
         sessionStorage.setItem("pregunta10", this.state.values.pregunta10)
         sessionStorage.setItem("comment", this.state.values.comment)
+
+        //Autorización de datos
+        sessionStorage.setItem("autorizacion", this.state.values.autorizacion)
 
         //Cuando hacemos click en el botón, con Link navega a la otra vista
         document.querySelector("#resultado").click();
@@ -80,6 +136,7 @@ export default class Form extends Component {
         console.log("La pregunta 9 es: ", this.state.values.pregunta9);
         console.log("La pregunta 10 es: ", this.state.values.pregunta10);
         console.log("El mensaje de la usuaria es: ", this.state.values.comment);
+        console.log("¿Autorizó a mensajes o llamadas?: ", this.state.values.autorizacion);
 
         return (
             <div className="container">
@@ -92,7 +149,7 @@ export default class Form extends Component {
                         <p className="text-center" style={{ marginbottom: '60px' }} ><small className="font-italic text-secondary">Todos los campos marcados con <span className="font-weight-bold text-danger">*</span> son obligatorios.</small></p>
                     </div>
                 </section>
-                <form action="" className="main-form" method="POST">
+                <form action="" className="main-form"  >
                     <section className="row">
                         <fieldset className="col-md-12">
                             <h3>Datos básicos:</h3>
@@ -104,7 +161,7 @@ export default class Form extends Component {
                                 <div className="col-md-8">
                                     <fieldset className="form-group">
                                         <label htmlFor="name">Nombre Completo<span className="font-weight-bold text-danger">*</span></label>
-                                        <input id="name" type="text" className="form-control" name="name" placeholder="Escriba su nombre completo" maxLength="128" required onChange={this.handleChange} />
+                                        <input id="name" type="text" className="form-control" name="name" placeholder="Escriba su nombre completo" maxLength="40" required onChange={this.handleChange} />
                                     </fieldset>
                                 </div>
                                 <div className="col-md-4">
@@ -118,7 +175,8 @@ export default class Form extends Component {
                                 <div className="col-md-4">
                                     <fieldset className="form-group">
                                         <label htmlFor="email">Correo electrónico<span className="font-weight-bold text-danger">*</span></label>
-                                        <input id="email" type="email" className="form-control" name="email" placeholder="email@email.com" maxLength="40" required onChange={this.handleChange} />
+                                        <input id="email" type="email" className="form-control" name="email" placeholder="email@email.com"
+                                            pattern="^[a-zA-Z0-9.!#$%’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" maxLength="30" required onChange={this.handleChange} />
                                     </fieldset>
                                 </div>
                                 <div className="col-md-4">
@@ -391,15 +449,48 @@ export default class Form extends Component {
                     <section className="row">
                         <div className="col-md-12">
                             <div className="form-group">
-                                <label htmlFor="comment">Coméntanos tu situación al respecto <span className="font-italic text-secondary">(Opcional).</span> </label>
+                                <label htmlFor="comment">Coméntanos tu situación al respecto <span className="font-italic text-secondary">Opcional.</span> </label>
                                 <textarea className="form-control" name="comment" rows="6" id="comentarios" onChange={this.handleChange}></textarea>
+                            </div>
+                        </div>
+                    </section>
+
+                    <br />
+                    <hr />
+
+                    {/*Autorización de datos */}
+
+                    <section className="row">
+                        <div className="col-md-12">
+                            <h3>Autorización de datos</h3>
+                            <p></p>
+                        </div>
+                    </section>
+                    <section className="row">
+                        <div className="col-md-12">
+                            <div className="form-group">
+                                <p className="font-weight-bolder">
+                                    ¿Autoriza a recibir mensajes o llamadas de nuestras asesoras de parte de
+                                    <span className="font-weight-bold text-info"> La Secretaría de las Mujeres </span>para ayudarle en su caso?
+                                    <span className="font-weight-bolder text-danger">*</span>
+                                </p>
+                                <fieldset className="col-md-2">
+                                    <label className="radio">
+                                        <input type="radio" name="autorizacion" id="autorizacion1" value="SI" required onChange={this.handleChange} /> Si
+                                    </label>
+                                </fieldset>
+                                <fieldset className="col-md-2">
+                                    <label className="radio">
+                                        <input type="radio" name="autorizacion" id="autorizacion2" value="NO" required onChange={this.handleChange} /> No
+                                    </label>
+                                </fieldset>
                             </div>
                         </div>
                     </section>
                     <section className="row">
                         <div className="col-md-12">
 
-                            {/*Validación de datos antes de enviar el formulario*/}
+                            {/*Validación de campos llenos antes de enviar el formulario*/}
 
                             {this.state.values.name !== ""
                                 && this.state.values.age !== ""
@@ -416,6 +507,7 @@ export default class Form extends Component {
                                 && this.state.values.pregunta8 !== ""
                                 && this.state.values.pregunta9 !== ""
                                 && this.state.values.pregunta10 !== ""
+                                && this.state.values.autorizacion !== ""
                                 ? <button type="submit" onClick={this.handleClick} className="btn btn-success" id="sendForm">
                                     Enviar Encuesta
                                     </button>
@@ -433,7 +525,7 @@ export default class Form extends Component {
                     <br />
                     <br />
                     <footer className="container text-center">
-                        <p>Todos los derechos reservados SICGEM © 2020.</p>
+                        <p>Copyright &copy; 2020 by SICGEM</p>
                     </footer>
                 </div>
             </div>

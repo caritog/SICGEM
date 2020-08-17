@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Login } from "../components/Login";
-
 
 class Register extends Component {
     render() {
@@ -18,7 +16,7 @@ class Register extends Component {
                                         <div className="bg-light row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                                             <div className="col p-4 d-flex flex-column position-static">
 
-                                                <h4><strong className="d-inline-block mt-4">Hola {sessionStorage.getItem("name")}</strong></h4>
+                                                <h4><strong className="d-inline-block mt-4">Hola {sessionStorage.getItem("namelog")}</strong></h4>
                                                 <p>_____________________________________________</p>
 
                                                 <h2 >

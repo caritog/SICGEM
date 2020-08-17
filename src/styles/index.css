@@ -25,34 +25,117 @@
   color: #723e98;
 }
 
- /* @media (min-width: 340px) {
+ @media (min-width: 280px) {
 
   .img-responsive {
     align-content: center;
     width: 100%;
-    height: 80%;
-    padding-left: 5rem;
+    height: 100%;
+    padding: 0;
   }
-  
-
   .facebook-icon .fa-facebook {
     display: inline-flex;
     color: #3b5998;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 2px;
   }
-
   .twitter-icon .fa-twitter {
     display: inline-flex;
     color: #00acee;
-    font-size: 1rem; 
+    font-size: 1.3rem; 
     margin: 2px;
   }
-  
-*/
+}
 
-  /* Los estilos aquí contenidos solo se aplicarán a partir
-  del tamaño de pantalla indicado */
+ @media (min-width: 576px) and (max-width: 767.98px) { 
+
+  .img-responsive {
+    align-content: center;
+    width: 90%;
+    height: 100%;
+  }
+  .facebook-icon .fa-facebook {
+    display: inline-flex;
+    color: #3b5998;
+    font-size: 1.6rem;
+    margin: 2px;
+  }
+  .twitter-icon .fa-twitter {
+    display: inline-flex;
+    color: #00acee;
+    font-size: 1.6rem; 
+    margin: 2px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+  .img-responsive {
+    align-content: center;
+    width: 60%;
+    height: 100%;
+    padding: 0;
+  }
+  .facebook-icon .fa-facebook {
+    display: inline-flex;
+    color: #3b5998;
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  .twitter-icon .fa-twitter {
+    display: inline-flex;
+    color: #00acee;
+    font-size: 2rem; 
+    margin: 3px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+  .img-responsive {
+    align-content: center;
+    width: 50%;
+    height: 50%;
+    padding: 0;
+    margin-left: 30px;
+  }
+  .facebook-icon .fa-facebook {
+    display: inline-flex;
+    color: #3b5998;
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  .twitter-icon .fa-twitter {
+    display: inline-flex;
+    color: #00acee;
+    font-size: 2rem; 
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) { 
+
+  .img-responsive {
+    align-content: center;
+    width: 40%;
+    height: 50%;
+    padding: 0;
+    margin-left: 30px;
+  }
+  .facebook-icon .fa-facebook {
+    display: inline-flex;
+    color: #3b5998;
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  .twitter-icon .fa-twitter {
+    display: inline-flex;
+    color: #00acee;
+    font-size: 2rem; 
+    margin-right: 30px;
+  }
+}
+
 /* //////////////////// NAV BAR ////////////////////////// */
 
 .navbar {
@@ -62,15 +145,41 @@
   background-color:#723e98;
   color: white;
 }
+.btn-outline-light {
+  margin-bottom: 1% ;
+}
 .riesgo {
   color: #ffffff !important;
   background-color: #f00ca4;
   font-weight: bolder;
-  border: solid #ffffff 1px; 
+  border: solid #ffffff 1px;
 }
 .riesgo:hover {
   color: #f00ca4 !important;
   background-color: #ffffff;
+}
+.dropdown-menu {
+  background-color: #723e98!important;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #a256d8 !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+  .btn-outline-light .riesgo {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px)  {
+
+  .input-group-append {
+    display: none !important;
+  }
+  .input-group {
+    display: none !important;
+  }
 }
 
 /* //////////////////// BANNER ////////////////////////// */
@@ -104,12 +213,15 @@ section.masthead-body.masthead p {
     font-size: 3rem;
   }
 }
+
 /* //////////////////// BODY ////////////////////////// */
 
+.deja-miedo{
+  color: #f00ca4;
+}
 .btn-body {
   color: #ffffff !important;
   background-color: #723e98 !important;
-  border-style: none !important;
 }
 .body3 {
   background-color: #723e98;
@@ -171,7 +283,7 @@ div {
 }
 .widget-soc-icon .fa-facebook {
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 5px;
   padding: 5px;
   border: 1px solid white;
@@ -179,17 +291,19 @@ div {
 }
 .widget-soc-icon .fa-twitter {
   color: #ffffff;
-  font-size: 1.5rem; 
+  font-size: 2rem; 
   margin: 5px;
   padding: 5px;
   border: 1px solid white;
   border-radius: 50px;
 }
 .widget-soc-icon .fa-facebook:hover {
-  color: #3b5998;
+  color: #723e98;
+  border-color: #723e98;
 }
 .widget-soc-icon .fa-twitter:hover {
-  color: #00acee;
+  color: #723e98;
+  border-color: #723e98;
 }
 .widget ul {
   padding: 0px;
@@ -208,6 +322,7 @@ a, a.btn-link {
 .contact-widget-text a {
   color: #723e98;
   text-decoration: none;
+  font-weight: bolder;
 }
 .footer-widgets ul li:hover a, .footer-section a:hover {
   color: #723e98;
@@ -226,7 +341,7 @@ a, a.btn-link {
 }
 .copy a {
   font-weight: bold;
-  color: #723e98;
+  color: #501e77;
 }
 .copy a:hover {
   color: #c9c9c9c9;
@@ -235,4 +350,25 @@ a, a.btn-link {
   border-top: 0px solid #6d6e71;
   padding: 20px 0;
   text-align: center;
+}
+
+@media (min-width: 280px) {
+  .contact-widget-text {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+  .contact-widget-text {
+    font-size: 9px;
+  }
+  .sicgem-logo {
+    width: 110%;
+    height: 80%;
+  }
+  .image.wp-image-2652.attachment-full.size-full {
+    width: 120%;
+    height: 90%;
+  }
 }

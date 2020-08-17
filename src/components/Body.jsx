@@ -12,7 +12,7 @@ class Body extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-9 mx-auto">
-                                <p className="mb-5 ">Aquí encontrarás una luz de apoyo frente a lo que estás viviendo. <br /> ¡Juntas lo lograremos!</p>
+                                <p className="mb-5 font-italic">Aquí encontrarás una luz de apoyo frente a lo que estás viviendo. <br /> ¡Juntas lo lograremos!</p>
                             </div>
                             <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
                             </div>
@@ -79,9 +79,8 @@ class Body extends Component {
                             <div className="card h-100">
                                 <div className="card-body bg-light">
                                     <h5 className="card-title">3,642</h5>
-                                    <br />
-                                    <p className="card-text">PERSONAS QUE SE ANIMARON A DENUNCIAR.</p>
-                                    <button className="btn btn-info btn-body" href="https://www.medellin.gov.co/sicgem/?page_id=866">Ver más</button>
+                                    <p className="card-text">Personas superaron su miedo y cambiaron su vida. <br /> <span className="font-weight-bold deja-miedo">¡DEJA TU MIEDO ATRÁS!</span></p>
+                                    <a href="https://www.medellin.gov.co/sicgem/?page_id=866"><button className="btn btn-info btn-body">¡Súmate tu también!</button></a>
                                 </div>
                                 <img src={require('../images/call.jpg')} className="card-img-top" alt="Llamando a denunciar" />
                             </div>
@@ -123,7 +122,6 @@ class Body extends Component {
                                 <br />
                                 <br />
                                 <br />
-
                             </div>
                             <div className="col-lg-3">
                                 <i className="bd-placeholder-img rounded-circle fas fa-truck" width="140" height="140"
@@ -170,7 +168,7 @@ class Body extends Component {
                                 <p>“Cualquier acción u omisión, que le cause muerte, daño o sufrimiento físico, sexual, psicológico, económico
                                 o patrimonial por su condición de mujer, así como las amenazas de tales actos, la coacción o la privación
                                 arbitraria de la libertad, bien sea que se presente en el ámbito público o en el privado”. Ley 1257 del 4 de
-                                diciembre de 2008. Artículo 2°
+                                diciembre de 2008 - Artículo 2°.
                                 </p>
                             </div>
                         </div>

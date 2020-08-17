@@ -14,8 +14,10 @@ class Footer extends Component {
                                 <div id="footer-widgets-1" className="footer-widgets col-sm-4">
                                     <div id="text-2" className="widget widget_text">
                                         <div className="textwidget">
-                                            <img src={require("../images/sicgem-logo-invertido.png")} alt="Logo invertido" />
-                                            <div className="footer-sicgem-logo"></div>
+                                           
+                                            <div className="footer-sicgem-logo">
+                                            <img className="sicgem-logo" src={require("../images/sicgem-logo-invertido.png")} alt="Logo invertido"  />
+                                            </div>
                                         </div>
                                     </div>
                                     <div id="text-3" className="widget widget_text">
@@ -30,8 +32,8 @@ class Footer extends Component {
                                                     </span>
                                                 </p>
                                                 <p className="telephone">
-                                                    <span className="contact-widget-title footer-white-text">Teléfono:</span>
-                                                    <span className="contact-widget-text footer-white-text">(574)3855424</span>
+                                                    <span className="contact-widget-title footer-white-text">Teléfono: </span>
+                                                    <span className="contact-widget-text footer-white-text">(574) 3855424</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -90,7 +92,7 @@ class Footer extends Component {
                                     </div>
                                     <div id="media_image-2" className="widget widget_media_image">
                                         <img width="254" height="171" src={require('../images/alcaldia-de-medellin.png')}
-                                        className="image wp-image-2652  attachment-full size-full" alt="logo invertido" style={{maxwidth: '100%', height: 'auto'}} />
+                                        className="image wp-image-2652 attachment-full size-full" alt="logo invertido" style={{maxwidth: '100%', height: 'auto'}} />
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +103,7 @@ class Footer extends Component {
                     <div className="container text-center">
                         <div className="tpath-row">
                             <div id="copyright-text" className="copyright-info">
-                                <p className="copy">Copyright 2020 by <a href="//www.medellin.gov.co/sicgem/">SICGEM</a></p>
+                                <p className="copy">Copyright &copy; 2020 by <a href="//www.medellin.gov.co/sicgem/">SICGEM</a></p>
                             </div>
                         </div>
                     </div>

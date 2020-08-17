@@ -4,7 +4,6 @@ import MainPage from './components/MainPage';
 import Form from './components/Form';
 import Response from "./components/Response";
 import MainCards from "./components/MainCards";
-
 import Login from "./components/Login";
 import Register from "./components/Register";
 

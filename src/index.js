@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
-import './styles/response.css';
+import './styles/response-register.css';
 import './styles/cards-community.css';
-import './styles/login.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import App from './App';

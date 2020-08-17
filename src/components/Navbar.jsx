@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 class Navbar extends Component {
     render() {
@@ -30,34 +32,44 @@ class Navbar extends Component {
                                         className="sr-only">(current)</span></a>
                                 </li>
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="#">CUENTA CON NOSOTRAS <span className="sr-only">(current)</span></a>
+                                    <a className="nav-link" href="/"><span className="sr-only">(current)</span>CUENTA CON NOSOTRAS </a>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true"
+                                    <a className="nav-link dropdown-toggle" href="/" id="dropdown07" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">REGÍSTRATE</a>
-                                    <div className="dropdown-menu" aria-labelledby="dropdown07">
-                                        <div className="dropdown-item" >
-                                        <Link to="/login" className="nav-link text-dark m-0" id="cuentaconnosotras">
-                                            INSTITUCIÓN ALIADA
-                                        </Link>
+                                    <div className="dropdown-menu p-0" aria-labelledby="dropdown07">
+                                        <div className="dropdown-item " >
+                                            <Link to="/login" className="nav-link text-white m-0" id="cuentaconnosotras">
+                                                INSTITUCIÓN ALIADA
+                                            </Link>
                                         </div>
                                         <div className="dropdown-item" >
-                                        <Link to="/maincards" className="nav-link text-dark m-0" id="cuentaconnosotras">
-                                            OPORTUNIDADES MUJER
-                                        </Link>
+                                            <Link to="/maincards" className="nav-link text-white m-0" id="cuentaconnosotras">
+                                                OPORTUNIDADES MUJER
+                                            </Link>
                                         </div>
                                     </div>
                                 </li>
-                                <li className="nav-item m3">
-                                    <button className="btn btn-outline-light p-0" >
-                                    <Link to="/form" className="nav-link riesgo m-0" id="cuentaconnosotras">
+                                <div className="dropdown-divider"></div>
+                                <li className="nav-item">
+                                    <button className="btn btn-outline-light button-riesgo p-0" >
+                                        <Link to="/form" className="nav-link riesgo m-0" id="cuentaconnosotras">
                                             ¿ESTOY EN RIESGO?
-                                    </Link>
+                                        </Link>
                                     </button>
                                 </li>
                             </ul>
                             <form className="form-inline my-2 my-md-0">
-                                <input className="form-control" type="search" style={{ width: '6rem' }} placeholder="Buscar..." aria-label="Search" />
+                                <div className="input-group">
+                                    <input className="form-control buscar" type="search" style={{ width: '6rem' }} placeholder="Buscar" aria-label="Search" />
+                                    <div className="input-group-append">
+                                        <span className=" input-group-btn " >
+                                            <button className="btn btn-secondary buscar" id="inputGroup-sizing-default" type="submit" >
+                                                <i><FontAwesomeIcon icon={faSearch} /></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -68,3 +80,4 @@ class Navbar extends Component {
 };
 
 export default Navbar;
+

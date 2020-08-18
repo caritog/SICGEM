@@ -45,7 +45,7 @@ class Navbar extends Component {
                                         </div>
                                         <div className="dropdown-item" >
                                             <Link to="/maincards" className="nav-link text-white m-0" id="cuentaconnosotras">
-                                                OPORTUNIDADES MUJER
+                                                COMUNIDADES MUJER
                                             </Link>
                                         </div>
                                     </div>

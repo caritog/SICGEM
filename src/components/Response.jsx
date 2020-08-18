@@ -230,7 +230,7 @@ export default class Response extends Component {
                   <div className="col-md-12">
                     <div className="bg-light row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                       <div className="col p-4 d-flex flex-column position-static">
-                        <div className="mb-1 text-muted">
+                        <div className=" text-muted">
                           <p>Fecha de realización: {sessionStorage.getItem("date")}</p>
                         </div>
                         <h4><strong className="d-inline-block mb-2">Hola {sessionStorage.getItem("name")}</strong>
